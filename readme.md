@@ -1,8 +1,8 @@
 # This is an **Unstructured Temporary** Repository of Cyber Security related work
 ## Commits are at random
 
-## Some files will be moved [^1]
-[^1]: Intended For:
+## Some files will be moved
+Intended For:
 - [x] Lua scripts
 - [ ] Bash scripts
 - [x] Various Shell-Related project documents etc.
@@ -14,6 +14,3 @@
 *some code may be in progress and/or broken
 *No License Provided
 
-Here's a sentence with a footnote. [^1]
-
-[^1]: This is the footnote. 
