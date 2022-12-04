@@ -46,10 +46,10 @@ aireplay-ng –test -e yeahhub -a 00:11:22:33:44:55 wlan0mon			/#test specific S
 
 
 #NETWORK
-netstat -n				/#echo all connections (numerically)
+netstat -n	/#echo all connections (numerically)
 
 *****#MISC#*****
-#!/				/#"shebang"
+#!/		***redact (local $bash)		/#"shebang"
 
 command for use fluxion:
 #extract file in home 
@@ -69,8 +69,8 @@ apt-get install python2.7-dev libssl-dev zlib1g-dev libpcap-dev
 ID      MAC                      CHAN    SECU     PWR   ESSID
 [36]   B4:75:0E:20:40:B1         11     WPA2     31%     Bandit
 
--you can select any method to attack the wi-fi but the recommended way is to use HOSTAPD
--There are basically two ways through which you can create a Fake AP, either by using Hostapd or by using airbase-ng package.
+-select any method to attack vector. Most success with HOSTAPD #2021, likely has changed 
+-Fake AP, either by using Hostapd or by using airbase-ng package.
 
 
 cd;bash ˂(curl https://johnlewis.ie/flash_cb_fw.sh​)
