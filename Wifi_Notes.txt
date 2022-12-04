@@ -38,9 +38,6 @@ airodump-ng wlan0			/#start airodump-ng
 #***[mac address randomizer]***#
 macchanger -r wlan0
 
-
-
-
 #UTILITIES
 lsusb -vv				/#lsusb is a utility for displaying information about USB buses in the system and the devices connected to them [-t -D -h]
 airmon-ng	[#no argument]		/#[arguments] start wlan0 //-test wlan0mon
@@ -51,32 +48,8 @@ aireplay-ng –test -e yeahhub -a 00:11:22:33:44:55 wlan0mon			/#test specific S
 #NETWORK
 netstat -n				/#echo all connections (numerically)
 
-
-
-
-
-
 *****#MISC#*****
 #!/				/#"shebang"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 command for use fluxion:
 #extract file in home 
