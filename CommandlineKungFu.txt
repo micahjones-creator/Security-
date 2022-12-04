@@ -1,0 +1,105 @@
+Bash CLI
+
+#***Images***#
+type eog to open the image viewer program
+eog
+eog <name of the image file> 
+
+#DRIVERS
+apt-get install realtek-rtl88xxau-dkms			/#install drivers for wireless adapter
+
+****#MONITOR MODE && PACKET INJECTION for "iw" wifi#********
+-*Method 1 (airmon-ng)*-
+airmon-ng check kill			/#kill background processes 
+airmon-ng start wlan0		/#start mon mode
+iwconfig			/#wlan0mon?
+airmon-ng stop wlan0mon			/#stop mon mode
+
+-*Method 2 (ifconfig/iwconfig)*-
+iwconfig		/#check interface
+#ENABLE MON MODE#
+ifconfig wlan0 down			/#disable adapter interface
+iwconfig wlan0 mode monitor			/#enables monitor mode
+ifconfig wlan0 up			/#enable adapter interface
+#DISABLE MON MODE#
+ifconfig wlan0 down
+iwconfig wlan0 mode managed			/#NIC to managed mode
+ifconfig wlan0 up
+#TURN OFF NET MANAGER (PREVENTING MON MODE)#
+systemctl stop NetworkManager
+
+***#SCANNING#***
+[if install needed]
+apt-get install aircrack-ng
+ifconfig wlan up			/#put interface back into mon mode
+airodump-ng wlan0			/#start airodump-ng
+--help			/#Displays this usage screen
+
+#***[mac address randomizer]***#
+macchanger -r wlan0
+
+
+
+
+#UTILITIES
+lsusb -vv				/#lsusb is a utility for displaying information about USB buses in the system and the devices connected to them [-t -D -h]
+airmon-ng	[#no argument]		/#[arguments] start wlan0 //-test wlan0mon
+aireplay-ng -9 wlan0mon [#or wlan0]			/#test injection is working
+aireplay-ng –test -e yeahhub -a 00:11:22:33:44:55 wlan0mon			/#test specific SSID "Where, yeahhub is the name of the wireless network and 00:11:22:33:44:55 is the hardware address (MAC) of yeahhub wireless network."
+
+
+#NETWORK
+netstat -n				/#echo all connections (numerically)
+
+
+
+
+
+
+*****#MISC#*****
+#!/				/#"shebang"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+command for use fluxion:
+#extract file in home 
+
+fluxion not run on virtual machine because the wireless lan is disable
+
+- cd fluxion-master
+- ./Installer.sh
+- ./fluxion.sh			/#runs fluxion
+
+pyrit not installed fix
+root login
+apt-get install libpcap-dev
+apt-get install python2.7-dev libssl-dev zlib1g-dev libpcap-dev
+
+^^^"Bandit"^^^ TARGET NOTES
+ID      MAC                      CHAN    SECU     PWR   ESSID
+[36]   B4:75:0E:20:40:B1         11     WPA2     31%     Bandit
+
+-you can select any method to attack the wi-fi but the recommended way is to use HOSTAPD
+-There are basically two ways through which you can create a Fake AP, either by using Hostapd or by using airbase-ng package.
+
+
+
+
+
